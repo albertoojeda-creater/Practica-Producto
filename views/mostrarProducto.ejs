@@ -1,0 +1,30 @@
+<%- include("templates/encabezado")%>
+    <h1>Productos registrados</h1>
+    <div class="contenedor">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Descripción</th>
+                    <th>Precio</th>
+                    <th>Enlaces</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% productosCorrectos.forEach(productos=>{ %>
+                <tr>
+                    <td><%= productos.idproductos %></td>
+                    <td><%= productos.nombre %></td>
+                    <td><%= productos.descripcion %></td>
+                    <td><%= productos.costo %></td>
+                    <td>
+                        <a href="/editarProducto/<%= productos.idproductos %>">Editar / </a>
+                        <a href="/borrarProducto/<%= productos.idproductos %>">Borrar</a>
+                    </td>
+                </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+<%- include("templates/pie")%>

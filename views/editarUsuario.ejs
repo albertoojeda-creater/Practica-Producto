@@ -1,0 +1,26 @@
+<%- include("templates/encabezado")%>
+<h1>Editar Usuario</h1>
+    <div class="contenedor">
+        <form action="/editarUsuario" method="post" id="formulario">
+
+            <input type="hidden" value="<%= idusuario %>" name="idusuario" id="idusuario">
+
+            <label for="nombre">Nombre: </label><span class="ocultar errorNom">Nombre no valido</span>
+            <input value="<%= nombre %>" name="nombre" id="nombre" type="text" placeholder="Nombre">
+            <i class="ocultar xmarkErrorNom fa-regular fa-circle-xmark"></i>
+            <i class="ocultar checkMarkNom fa-regular fa-circle-check"></i>
+
+            <label for="celular">Celular: </label><span class="ocultar errorCel">Celular no valido</span>
+            <input value="<%= celular %>" name="celular" id="celular" type="text" placeholder="Celular">
+            <i class="ocultar xmarkErrorCel fa-regular fa-circle-xmark"></i>
+            <i class="ocultar checkMarkCel fa-regular fa-circle-check"></i>
+
+            <label for="correo">Correo: </label><span class="ocultar errorCo">Correo no valido</span>
+            <input value="<%= correo %>" name="correo" id="correo" type="text" placeholder="Correo">
+            <i class="ocultar xmarkErrorCorreo fa-regular fa-circle-xmark"></i>
+            <i class="ocultar checkMarkCorreo fa-regular fa-circle-check"></i>
+
+            <button type="submit">Editar usuario</button>
+        </form>
+    </div>
+<%- include("templates/pie")%>

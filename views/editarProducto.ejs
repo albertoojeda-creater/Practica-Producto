@@ -1,0 +1,26 @@
+<%- include("templates/encabezado")%>
+<h1>Editar Usuario</h1>
+<div class="contenedor">
+    <form action="/editarProducto" method="post" id="formulario">
+
+        <input type="hidden" value="<%= idproductos %>" name="idproductos" id="idproductos">
+
+        <label for="nombre">Nombre: </label><span class="ocultar errorNom">Nombre no válido</span>
+        <input value="<%= nombre %>" name="nombre" id="nombre" type="text" placeholder="Nombre">
+        <i class="ocultar xmarkErrorNom fa-regular fa-circle-xmark"></i>
+        <i class="ocultar checkMarkNom fa-regular fa-circle-check"></i>
+
+        <label for="descripcion">Descripción: </label><span class="ocultar errorDes">Descripción no válida</span>
+        <input value="<%= descripcion %>" name="descripcion" id="descripcion" type="text" placeholder="Descripción">
+        <i class="ocultar xmarkErrorDes fa-regular fa-circle-xmark"></i>
+        <i class="ocultar checkMarkDes fa-regular fa-circle-check"></i>
+
+        <label for="costo">Costo: </label><span class="ocultar errorCo">Costo no válido</span>
+        <input value="<%= costo %>" name="costo" id="costo" type="text" placeholder="Costo">
+        <i class="ocultar xmarkErrorCo fa-regular fa-circle-xmark"></i>
+        <i class="ocultar checkMarkCo fa-regular fa-circle-check"></i>
+
+        <button type="submit">Editar usuario</button>
+    </form>
+</div>
+<%- include("templates/pie")%>
