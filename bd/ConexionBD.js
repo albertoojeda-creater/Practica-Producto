@@ -1,3 +1,4 @@
+require('dotenv').config();
 class ConectarBD{
     constructor(){
         this.conexion=null;
