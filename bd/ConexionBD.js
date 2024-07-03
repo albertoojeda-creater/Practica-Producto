@@ -9,7 +9,7 @@ class ConectarBD{
                 host:'bss2nnnlwdtotfhs5l2w-mysql.services.clever-cloud.com',
                 user:'udepiakgkg49bhjk',
                 password:'IEkRX54TGORZynybNvJ2',
-                database:'tiendaut',
+                database:'bss2nnnlwdtotfhs5l2w',
                 port:'3306'
             });
             console.log("Conexion creada a MySql");
