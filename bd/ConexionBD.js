@@ -7,11 +7,11 @@ class ConectarBD{
     async conectarMysql(){
         try {
             this.conexion=await this.mysql.createConnection({
-                host:'bss2nnnlwdtotfhs5l2w-mysql.services.clever-cloud.com',
-                user:'udepiakgkg49bhjk',
-                password:'IEkRX54TGORZynybNvJ2',
-                database:'bss2nnnlwdtotfhs5l2w',
-                port:'3306'
+                host:process.env.HOSTMYSQL,
+                user:process.env.USERMYSQL,
+                password:process.env.PASSWORDMYSQL,
+                database:process.env.DATABASEMYSQL,
+                port:process.env.PORTMYSQL
             });
             console.log("Conexion creada a MySql");
         } catch (error) {
